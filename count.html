@@ -4,6 +4,7 @@
     <title>Count</title>
     <script>
       let counter = 0;
+
       function count() {
         counter++;
         document.querySelector('h1').innerHTML = counter;
@@ -12,6 +13,11 @@
           alert(`Count is now ${counter}`)
         }
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('button').onclick = count;
+      });
+
     </script>
   </head>
   <body>
